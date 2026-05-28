@@ -1,0 +1,87 @@
+model:
+  hf_repo: mlx-community/supertonic-3
+  source_space: mlx-community/supertonic-3
+  runtime: local SupertonicMLX graph executor
+
+generation_defaults:
+  lang: en
+  voice: M1
+  total_step: 8
+  speed: 1.05
+  seed: -1
+  silence_duration: 0.3
+  open_after: false
+
+parameter_reference:
+  lang: "Language tag prepended to the text. Use na when the text may mix languages."
+  voice: "Preset voice embedding from voice_styles. M1-M5 are male-coded presets, F1-F5 are female-coded presets."
+  total_step: "Flow-matching refinement steps. 5 is fast, 8 is balanced, 12 is higher quality."
+  speed: "Speaking rate multiplier. Lower is slower; higher is faster. Practical range is 0.7-2.0."
+  seed: "Use -1 for a fresh random seed, or an integer for repeatable output."
+  silence_duration: "Seconds inserted between chunks when the input text is split."
+
+languages:
+  - { code: en, name: English }
+  - { code: es, name: Spanish }
+  - { code: ko, name: Korean }
+  - { code: ja, name: Japanese }
+  - { code: fr, name: French }
+  - { code: de, name: German }
+  - { code: it, name: Italian }
+  - { code: pt, name: Portuguese }
+  - { code: nl, name: Dutch }
+  - { code: pl, name: Polish }
+  - { code: ru, name: Russian }
+  - { code: sv, name: Swedish }
+  - { code: tr, name: Turkish }
+  - { code: uk, name: Ukrainian }
+  - { code: vi, name: Vietnamese }
+  - { code: ar, name: Arabic }
+  - { code: bg, name: Bulgarian }
+  - { code: cs, name: Czech }
+  - { code: da, name: Danish }
+  - { code: el, name: Greek }
+  - { code: et, name: Estonian }
+  - { code: fi, name: Finnish }
+  - { code: hi, name: Hindi }
+  - { code: hr, name: Croatian }
+  - { code: hu, name: Hungarian }
+  - { code: id, name: Indonesian }
+  - { code: lt, name: Lithuanian }
+  - { code: lv, name: Latvian }
+  - { code: ro, name: Romanian }
+  - { code: sk, name: Slovak }
+  - { code: sl, name: Slovenian }
+  - { code: na, name: Auto / language-agnostic }
+
+voices:
+  - { id: M1, label: M1, description: Clear male narrator }
+  - { id: M2, label: M2, description: Warm male presenter }
+  - { id: M3, label: M3, description: Low male storyteller }
+  - { id: M4, label: M4, description: Bright male explainer }
+  - { id: M5, label: M5, description: Relaxed male voice }
+  - { id: F1, label: F1, description: Clear female narrator }
+  - { id: F2, label: F2, description: Warm female presenter }
+  - { id: F3, label: F3, description: Calm female storyteller }
+  - { id: F4, label: F4, description: Bright female explainer }
+  - { id: F5, label: F5, description: Relaxed female voice }
+
+text_presets:
+  - label: Product
+    text: "Welcome to the local Supertonic 3 MLX studio. Type any script, pick a voice, and generate clean speech on-device."
+  - label: Audiobook
+    text: "The room was quiet except for the rain against the window. She turned the page slowly, already knowing the next sentence would change everything."
+  - label: News
+    text: "Here is a quick update. Supertonic 3 now runs as a compact multilingual text-to-speech model with local MLX inference."
+  - label: Character
+    text: "<breath> I was waiting for the right moment to tell you. This city remembers every secret we tried to leave behind."
+  - label: Spanish
+    text: "Buenos dias. Esta es una prueba local de Supertonic 3 usando MLX en Apple Silicon."
+
+surprise_texts:
+  - "A tiny local model can still sound enormous when the timing, voice, and silence are handled carefully."
+  - "This is a short narration test with a warm delivery, clean pacing, and a calm ending."
+  - "Good morning. The build completed successfully, and the next step is to listen for clarity, rhythm, and tone."
+  - "<sigh> Sometimes the smallest tools are the ones that make a workflow feel alive again."
+  - "En una tarde tranquila, la voz encontro su camino entre las palabras y la musica del silencio."
+

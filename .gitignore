@@ -1,0 +1,10 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+.python-version
+models/supertonic-3/
+output/**/*.wav
+output/**/*.json
+output/**/*.log
+!output/gui/.gitignore
